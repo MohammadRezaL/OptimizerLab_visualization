@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OptimizerLab</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header class="topbar">
+    <div class="logo">
+        OptimizerLab
+    </div>
+
+    <div class="subtitle">
+        Metaheuristic Optimization Visualizer
+    </div>
+</header>
+
+<div class="container">
+
+    <!-- LEFT PANEL -->
+
+    <aside class="left-panel">
+
+        <h2>Algorithm Information</h2>
+
+        <div class="info-card">
+
+            <div class="info-row">
+                <strong>Name:</strong>
+                <span id="algoName">
+                    Walrus Optimization Algorithm
+                </span>
+            </div>
+
+            <div class="info-row">
+                <strong>Authors:</strong>
+                <span id="algoAuthors">
+                    Trojovský & Dehghani
+                </span>
+            </div>
+
+            <div class="info-row">
+                <strong>Year:</strong>
+                <span id="algoYear">
+                    2023
+                </span>
+            </div>
+
+            <div class="info-row">
+                <strong>Type:</strong>
+                <span id="algoType">
+                    Swarm Intelligence
+                </span>
+            </div>
+
+        </div>
+
+        <h2>Pseudocode</h2>
+
+        <div class="pseudo-box">
+
+            <div class="pseudo-line active" id="phase1-code">
+                Phase 1
+            </div>
+
+            <div class="pseudo-line" id="phase2-code">
+                Phase 2
+            </div>
+
+            <div class="pseudo-line" id="phase3-code">
+                Phase 3
+            </div>
+
+            <div class="pseudo-line">
+                Update Best Solution
+            </div>
+
+        </div>
+
+        <h2>Current Equation</h2>
+
+        <div class="equation-box">
+
+            <p id="equationText">
+                Waiting...
+            </p>
+
+        </div>
+
+    </aside>
+
+    <!-- CENTER -->
+
+    <main class="center-panel">
+
+        <div class="canvas-header">
+
+            <div class="status">
+
+                Algorithm:
+                <span id="currentAlgorithm">
+                    WaOA
+                </span>
+
+            </div>
+
+            <div class="status">
+
+                Phase:
+                <span id="phaseName">
+                    Feeding Strategy
+                </span>
+
+            </div>
+
+        </div>
+
+        <canvas id="swarmCanvas"></canvas>
+
+        <div class="chart-section">
+
+            <h3>Convergence Curve</h3>
+
+            <canvas id="fitnessChart"></canvas>
+
+        </div>
+
+    </main>
+
+    <!-- RIGHT PANEL -->
+
+    <aside class="right-panel">
+
+        <h2>Controls</h2>
+
+        <div class="control-group">
+
+            <label>
+                Optimizer
+            </label>
+
+            <select id="optimizerSelect">
+
+                <option value="waoa">
+                    Walrus Optimization Algorithm
+                </option>
+
+                <option value="sboa">
+                    Secretary Bird Optimization Algorithm
+                </option>
+
+            </select>
+
+        </div>
+
+        <div class="control-group">
+
+            <label>
+                Benchmark Function
+            </label>
+
+            <select id="functionSelect">
+
+                <option value="sphere">
+                    Sphere
+                </option>
+
+                <option value="rastrigin">
+                    Rastrigin
+                </option>
+
+                <option value="ackley">
+                    Ackley
+                </option>
+
+            </select>
+
+        </div>
+
+        <div class="control-group">
+
+            <label>
+                Population Size
+            </label>
+
+            <input
+                type="number"
+                id="populationSize"
+                min="5"
+                max="500"
+                value="30"
+            >
+
+        </div>
+
+        <div class="control-group">
+
+            <label>
+                Iterations
+            </label>
+
+            <input
+                type="number"
+                id="maxIterations"
+                min="10"
+                max="10000"
+                value="200"
+            >
+
+        </div>
+
+        <div class="control-group">
+
+            <label>
+                Speed
+            </label>
+
+            <input
+                type="range"
+                id="speedSlider"
+                min="10"
+                max="1000"
+                value="200"
+            >
+
+            <span id="speedValue">
+                200 ms
+            </span>
+
+        </div>
+
+        <div class="buttons">
+
+            <button id="playBtn">
+                Play
+            </button>
+
+            <button id="stopBtn">
+                Stop
+            </button>
+
+            <button id="stepBtn">
+                Step
+            </button>
+
+            <button id="resetBtn">
+                Reset
+            </button>
+
+        </div>
+
+        <div class="metrics">
+
+            <h2>Metrics</h2>
+
+            <div class="metric">
+                Iteration
+                <span id="iterationValue">
+                    0
+                </span>
+            </div>
+
+            <div class="metric">
+                Best Fitness
+                <span id="fitnessValue">
+                    0
+                </span>
+            </div>
+
+            <div class="metric">
+                Population
+                <span id="populationDisplay">
+                    30
+                </span>
+            </div>
+
+            <div class="metric">
+                Active Algorithm
+                <span id="activeAlgorithm">
+                    WaOA
+                </span>
+            </div>
+
+        </div>
+
+    </aside>
+
+</div>
+
+<!-- JAVASCRIPT -->
+
+<script src="waoa.js"></script>
+<script src="sboa.js"></script>
+<script src="visualizer.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
