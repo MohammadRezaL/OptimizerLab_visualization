@@ -1,0 +1,528 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+
+    --bg:#050914;
+
+    --panel:#0c1324;
+
+    --panel2:#111a2d;
+
+    --border:#23324f;
+
+    --text:#e7edf9;
+
+    --muted:#9aa7c4;
+
+    --primary:#5cc8ff;
+
+    --secondary:#ffd166;
+
+    --danger:#ff6b6b;
+
+    --success:#52d273;
+
+}
+
+body{
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    font-family:
+        "Segoe UI",
+        Tahoma,
+        sans-serif;
+
+    height:100vh;
+
+    overflow:hidden;
+}
+
+/* ===========================
+   TOPBAR
+=========================== */
+
+.topbar{
+
+    height:70px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 25px;
+
+    background:#08101f;
+
+    border-bottom:1px solid var(--border);
+}
+
+.logo{
+
+    font-size:26px;
+
+    font-weight:700;
+
+    color:var(--primary);
+}
+
+.subtitle{
+
+    color:var(--muted);
+
+    font-size:14px;
+}
+
+/* ===========================
+   MAIN GRID
+=========================== */
+
+.container{
+
+    display:grid;
+
+    grid-template-columns:
+        320px
+        1fr
+        340px;
+
+    height:calc(100vh - 70px);
+}
+
+/* ===========================
+   LEFT PANEL
+=========================== */
+
+.left-panel{
+
+    background:var(--panel);
+
+    border-right:1px solid var(--border);
+
+    padding:20px;
+
+    overflow-y:auto;
+}
+
+.left-panel h2{
+
+    margin-bottom:12px;
+
+    color:var(--primary);
+
+    font-size:18px;
+}
+
+.info-card{
+
+    background:var(--panel2);
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    padding:15px;
+
+    margin-bottom:25px;
+}
+
+.info-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:10px;
+
+    color:var(--text);
+
+    font-size:14px;
+}
+
+.pseudo-box{
+
+    background:var(--panel2);
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    padding:12px;
+
+    margin-bottom:25px;
+}
+
+.pseudo-line{
+
+    padding:12px;
+
+    margin-bottom:8px;
+
+    border-radius:8px;
+
+    color:var(--muted);
+
+    transition:0.3s;
+}
+
+.pseudo-line.active{
+
+    background:rgba(92,200,255,0.15);
+
+    border-left:4px solid var(--primary);
+
+    color:var(--primary);
+}
+
+.equation-box{
+
+    background:var(--panel2);
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    padding:15px;
+
+    min-height:120px;
+}
+
+#equationText{
+
+    color:var(--secondary);
+
+    line-height:1.7;
+
+    font-size:15px;
+}
+
+/* ===========================
+   CENTER
+=========================== */
+
+.center-panel{
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:#08111d;
+}
+
+.canvas-header{
+
+    height:60px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 20px;
+
+    background:#091222;
+
+    border-bottom:1px solid var(--border);
+}
+
+.status{
+
+    font-size:14px;
+
+    color:var(--text);
+}
+
+.status span{
+
+    color:var(--primary);
+
+    font-weight:600;
+}
+
+#swarmCanvas{
+
+    flex:1;
+
+    width:100%;
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,0.03) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.03) 1px,
+            transparent 1px
+        );
+
+    background-size:40px 40px;
+}
+
+/* ===========================
+   CHART
+=========================== */
+
+.chart-section{
+
+    height:260px;
+
+    background:#091222;
+
+    border-top:1px solid var(--border);
+
+    padding:15px;
+}
+
+.chart-section h3{
+
+    margin-bottom:12px;
+
+    color:var(--primary);
+}
+
+#fitnessChart{
+
+    width:100% !important;
+
+    height:190px !important;
+}
+
+/* ===========================
+   RIGHT PANEL
+=========================== */
+
+.right-panel{
+
+    background:var(--panel);
+
+    border-left:1px solid var(--border);
+
+    padding:20px;
+
+    overflow-y:auto;
+}
+
+.right-panel h2{
+
+    margin-bottom:15px;
+
+    color:var(--primary);
+}
+
+.control-group{
+
+    margin-bottom:18px;
+}
+
+.control-group label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    color:var(--muted);
+}
+
+.control-group input[type="number"],
+
+.control-group select{
+
+    width:100%;
+
+    padding:12px;
+
+    border-radius:10px;
+
+    border:1px solid var(--border);
+
+    background:var(--panel2);
+
+    color:white;
+}
+
+.control-group input[type="range"]{
+
+    width:100%;
+}
+
+#speedValue{
+
+    display:block;
+
+    margin-top:6px;
+
+    color:var(--secondary);
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.buttons{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:10px;
+
+    margin-top:20px;
+}
+
+button{
+
+    border:none;
+
+    border-radius:10px;
+
+    padding:12px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:0.25s;
+}
+
+button:hover{
+
+    transform:translateY(-2px);
+}
+
+#playBtn{
+
+    background:var(--success);
+
+    color:white;
+}
+
+#stopBtn{
+
+    background:var(--danger);
+
+    color:white;
+}
+
+#stepBtn{
+
+    background:var(--secondary);
+
+    color:black;
+}
+
+#resetBtn{
+
+    background:#4b5563;
+
+    color:white;
+}
+
+/* ===========================
+   METRICS
+=========================== */
+
+.metrics{
+
+    margin-top:25px;
+
+    background:var(--panel2);
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    padding:15px;
+}
+
+.metric{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:12px;
+
+    color:var(--text);
+}
+
+.metric span{
+
+    color:var(--primary);
+
+    font-weight:600;
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+
+    background:#08111d;
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#23324f;
+
+    border-radius:20px;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1200px){
+
+    .container{
+
+        grid-template-columns:
+            280px
+            1fr
+            300px;
+    }
+}
+
+@media(max-width:900px){
+
+    body{
+
+        overflow:auto;
+    }
+
+    .container{
+
+        display:flex;
+
+        flex-direction:column;
+
+        height:auto;
+    }
+
+    .left-panel,
+    .right-panel{
+
+        border:none;
+    }
+
+    .center-panel{
+
+        min-height:700px;
+    }
+}
