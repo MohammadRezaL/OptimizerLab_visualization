@@ -2,10 +2,14 @@
 
 An interactive web-based simulation platform for visualizing and comparing Swarm Intelligence optimization algorithms such as **SBOA (Secretary Bird Optimization Algorithm)** and **WaOA (Walrus Optimization Algorithm)**.
 
+
+
 The project demonstrates how population-based metaheuristic algorithms explore and exploit a search space in real time using dynamic visualization.
 
 
-🚀 Features
+
+
+**🚀 Features**
 
 - Real-time swarm visualization using Canvas
 - Step-by-step simulation of optimization process
@@ -25,6 +29,8 @@ The project demonstrates how population-based metaheuristic algorithms explore a
 - Interactive controls (Play / Stop / Step / Reset)
 
 
+
+
 🧮 Algorithms Overview
 
 🦅 SBOA (Secretary Bird Optimization Algorithm)
@@ -40,11 +46,14 @@ A population-based metaheuristic inspired by walrus behavior:
 - Predator escape
 
 
+
+
 📊 Benchmark Functions
 
 - Sphere Function (convex baseline)
 - Rastrigin Function (multimodal, complex landscape)
 - Ackley Function (many local minima)
+
 
 
 
@@ -54,6 +63,7 @@ A population-based metaheuristic inspired by walrus behavior:
 - JavaScript (ES6)
 - Chart.js
 - CSS3 (Dark UI)
+
 
 
 
@@ -72,6 +82,8 @@ project/
 
 
 
+
+
 ▶️ How to Run
 
 ```bash
@@ -80,6 +92,8 @@ cd your-repo
 ```
 
 Then open `index.html` in your browser (or use Live Server).
+
+
 
 
 
@@ -92,12 +106,16 @@ Then open `index.html` in your browser (or use Live Server).
 
 
 
+
+
 🎯 Purpose
 
 - Learning swarm intelligence algorithms
 - Visualizing optimization behavior
 - Comparing metaheuristic methods
 - Educational & research use
+
+
 
 
 
@@ -108,6 +126,8 @@ Then open `index.html` in your browser (or use Live Server).
 - Performance comparison dashboard
 - Export results (CSV/JSON)
 - Theme switch (dark/light)
+
+
 
 
 👨‍💻 Author
