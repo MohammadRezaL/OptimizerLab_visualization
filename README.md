@@ -87,8 +87,8 @@ project/
 ▶️ How to Run
 
 ```bash
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
+git clone https://github.com/MohammadRezaL/OptimizerLab_visualization.git
+cd OptimizerLab_visualization
 ```
 
 Then open `index.html` in your browser (or use Live Server).
@@ -118,19 +118,4 @@ Then open `index.html` in your browser (or use Live Server).
 
 
 
-
-🔧 Future Improvements
-
-- Add PSO, GWO, ACO
-- 3D visualization
-- Performance comparison dashboard
-- Export results (CSV/JSON)
-- Theme switch (dark/light)
-
-
-
-
-👨‍💻 Author
-
-Educational project for optimization algorithm visualization.
 
